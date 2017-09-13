@@ -5,14 +5,18 @@ public class BridgeEngineParameter {
     private String shareId;
     private String projectId;
     private String version;
+    private String synchType;
+    private String hs;
 
     public BridgeEngineParameter() {
     }
 
-    public BridgeEngineParameter(String shareId, String projectId, String version) {
+    public BridgeEngineParameter(String shareId, String projectId, String version, String synchType, String hs) {
         this.shareId = shareId;
         this.projectId = projectId;
         this.version = version;
+        this.synchType = synchType;
+        this.hs = hs;
     }
 
     public String getProjectId() {
@@ -37,5 +41,21 @@ public class BridgeEngineParameter {
 
     public void setShareId(String shareId) {
         this.shareId = shareId;
+    }
+
+    public String getSynchType() {
+        return synchType;
+    }
+
+    public void setSynchType(String synchType) {
+        this.synchType = synchType;
+    }
+
+    public String getHs() {
+        return hs;
+    }
+
+    public void setHs(String hs) {
+        this.hs = hs;
     }
 }
