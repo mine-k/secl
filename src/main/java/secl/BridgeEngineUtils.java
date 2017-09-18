@@ -41,10 +41,14 @@ public abstract class BridgeEngineUtils {
         args.add(filePath);
         args.add("-schema");
         args.add("schema_data_batch");
-        args.add("-synchType");
-        args.add(parameter.getSynchType());
-        args.add("-hs");
-        args.add(parameter.getHs());
+        if (parameter.getSynchType() != null) {
+            args.add("-synchType");
+            args.add(parameter.getSynchType());
+        }
+        if (parameter.getHs() != null) {
+            args.add("-hs");
+            args.add(parameter.getHs());
+        }
         return args;
     }
 
