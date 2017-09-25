@@ -1,5 +1,7 @@
 package secl.common;
 
+import java.nio.file.Path;
+
 public enum SeclFileType {
 
     HomeProject("_project_result.xlsx"),
@@ -19,5 +21,14 @@ public enum SeclFileType {
 
     public String getPattern() {
         return pattern;
+    }
+
+    public static SeclFileType getValue(Path path) {
+        for (SeclFileType seclFileType : SeclFileType.values()) {
+            if (path.toFile().getName().endsWith(seclFileType.getPattern())) {
+                return seclFileType;
+            }
+        }
+        return null;
     }
 }
