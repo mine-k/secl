@@ -1,6 +1,6 @@
 package secl.common;
 
-public enum FilePattern {
+public enum FileType {
 
     HomeProject("_project_result.xlsx"),
     HomeSchedule("_schedule_result.xlsx"),
@@ -13,7 +13,7 @@ public enum FilePattern {
 
     private String pattern;
 
-    FilePattern(String pattern) {
+    FileType(String pattern) {
         this.pattern = pattern;
     }
 
