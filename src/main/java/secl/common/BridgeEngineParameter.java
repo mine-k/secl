@@ -58,4 +58,15 @@ public class BridgeEngineParameter {
     public void setHs(String hs) {
         this.hs = hs;
     }
+
+    @Override
+    public String toString() {
+        return "BridgeEngineParameter{" +
+                "shareId='" + shareId + '\'' +
+                ", projectId='" + projectId + '\'' +
+                ", version='" + version + '\'' +
+                ", synchType='" + synchType + '\'' +
+                ", hs='" + hs + '\'' +
+                '}';
+    }
 }
