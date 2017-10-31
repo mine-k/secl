@@ -19,7 +19,8 @@ public class AES {
     private String iv;
     private Key keySpec;
 
-    public AES(String key) throws UnsupportedEncodingException {
+    public AES() throws UnsupportedEncodingException {
+        String key = "p3ec.secl.encryption";
         this.iv = key.substring(0, 16);
 
         byte[] keyBytes = new byte[16];
